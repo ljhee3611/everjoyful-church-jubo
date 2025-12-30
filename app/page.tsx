@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
 
 export default function Home() {
-  const [activeImages, setActiveImages] = useState([]) // 실제 있는 이미지 번호만 저장
+  const [activeImages, setActiveImages] = useState<number[]>([]) // 실제 있는 이미지 번호만 저장
   const storageUrl = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/images`
 
   useEffect(() => {
